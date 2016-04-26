@@ -10,6 +10,6 @@ OpenMM is a hardware independent molecular simulation library developed by Pande
 Please install OpenMM using from source code or using conda build if anaconda python is available in your computer. After successful installation continue to the do the tutorial below.
 
 ---
-## Ethanol
-
+## 1,2-Ethane Diol system 
+![](test.png)
 ### Gas phase minimization 
