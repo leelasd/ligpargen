@@ -22,5 +22,19 @@ from simtk.openmm import app,KcalPerKJ
 import simtk.openmm as mm
 from simtk import unit as u
 from sys import stdout,exit
-from BOSSReader import *
+
+temperature=298.15*u.kelvin
+pdb = app.PDBFile('ETD.pdb')
+modeller = app.Modeller(pdb.topology, pdb.positions)
+forcefield = app.ForceField('ETD.xml')
+integrator = mm.LangevinIntegrator(temperature, 1/u.picosecond,  0.001*u.picoseconds)
+simulation = app.Simulation(modeller.topology, system, integrator)
+simulation.context.setPositions(modeller.positions)
+simulation.minimizeEnergy(maxIterations=100)
+energy=simulation.context.getState(getEnergy=True).getPotentialEnergy()
+position = simulation.context.getState(getPositions=True).getPositions()
+app.PDBFile.writeFile(simulation.topology, position, open('gasmin.pdb', 'w'))
+        print energy
+        print 'Energy at Minima is %3.3f kcal/mol'%(energy._value*KcalPerKJ)
+
 ```
