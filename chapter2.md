@@ -12,4 +12,4 @@ Please install OpenMM using from source code or using conda build if anaconda py
 ---
 ## Ethanol
 
-### Gas phase minimisation 
+### Gas phase minimization 
