@@ -1,3 +1,4 @@
 # MD simulations with OpenMM
 
-OpenMM has been gaining popularity because of the flexibility it offers for scientists to implement new methodologies and force fields.
+
+OpenMM is a hardware independent molecular simulation library developed by Pande group at Stanford. OpenMM core libraries are written in C++ but a python wrapper is provided to make the interaction between user and 
