@@ -7,7 +7,7 @@ LigParGen provides OPLS-AA force field parameters for modeling bonds, angles, to
 
 One can obtain topology and parmeter files from SMILES code or by uploading mol/pdb files of the ligand. 
 
-**Supported input file formats: PDB, MOL, SMILES**
+**Supported input file formats: SMILES(2D), PDB and MOL (3D)**
 
 LigParGen can deal with molecules as big as Linezoloid shown in Figure 1.
 ![](linezo.png)
