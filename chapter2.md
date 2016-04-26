@@ -27,6 +27,8 @@ temperature=298.15*u.kelvin
 pdb = app.PDBFile('ETD.pdb')
 modeller = app.Modeller(pdb.topology, pdb.positions)
 forcefield = app.ForceField('ETD.xml')
+system = forcefield.createSystem(modeller.topology, nonbondedMethod=app.NoCutoff,  constraints=None)
+
 integrator = mm.LangevinIntegrator(temperature, 1/u.picosecond,  0.001*u.picoseconds)
 simulation = app.Simulation(modeller.topology, system, integrator)
 simulation.context.setPositions(modeller.positions)
@@ -41,6 +43,7 @@ print 'Energy at Minimized structure is %3.3f kcal/mol'%(energy._value*KcalPerKJ
 Save this code in `gasmin.py` and run it by typing following  command  
 
 > python gasmin.py > log &
+> 
 
 ### Gas-phase MD Simulation
 
