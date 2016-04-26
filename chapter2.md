@@ -40,7 +40,7 @@ print 'Energy at Minimized structure is %3.3f kcal/mol'%(energy._value*KcalPerKJ
 
 Save this code in `gasmin.py` and run it by typing following  command  
 
-> python gasmin.py
+> python gasmin.py > log &
 
 ### Gas-phase MD Simulation
 
