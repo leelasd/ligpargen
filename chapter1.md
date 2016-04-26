@@ -33,3 +33,5 @@ Click on the below links to learn more about installing these packages.
 - [NAMD](http://www.ks.uiuc.edu/Research/namd/2.10/ug/node93.html) (Free)
 - [OpenMM](http://docs.openmm.org/6.2.0/userguide/application.html#installing-openmm) ()
 - AMBER (Commercial)
+
+Examples for using these files with different packages will be discussed here.
