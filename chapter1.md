@@ -10,4 +10,4 @@ One can obtain topology and parmeter files from SMILES code or by uploading mol/
 **Supported input file formats: SMILES(2D), PDB and MOL (3D)**
 
 LigParGen can deal with molecules as big as Linezoloid shown in Figure 1.
-![](linezo.png)
+![](linezo.png=100x20)
