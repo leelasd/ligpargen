@@ -24,7 +24,9 @@ LigParGen provides the following files upon successfull submission of ligand.
  |GROMACS | .itp | .gro|
 
 ### References
-1. Potential energy functions for atomic-level simulations of water and organic and biomolecular systems.  Jorgensen, W. L.; Tirado-Rives, J. Proc. Nat. Acad. Sci. USA 2005, 102, 6665-6670. doi:10.1073/pnas.0408037102.
+1. [Potential energy functions for atomic-level simulations of water and organic and biomolecular systems.  Jorgensen, W. L.; Tirado-Rives, J. Proc. Nat. Acad. Sci. USA 2005, 102, 6665-6670. doi:10.1073/pnas.0408037102.](http://www.pnas.org/content/102/19/6665)
+
+
 ## How to use these parameter and topology files?
 
 Files obtained from LigParGen server are useful for performing MD simulations. These files are compatible with MD software such as NAMD, AMBER, GROMACS and OpenMM. 
