@@ -34,4 +34,4 @@ Click on the below links to learn more about installing these packages.
 - [OpenMM](http://docs.openmm.org/6.2.0/userguide/application.html#installing-openmm) (Free)
 - AMBER (Commercial)
 
-Examples for using these files with different packages will be discussed here.
+Examples for using these files with different packages will be discussed in this tutorial.
