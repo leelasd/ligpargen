@@ -12,7 +12,7 @@ Please install OpenMM using from source code or using conda build if anaconda py
 ---
 ## 1,2-Ethane Diol system 
 ![](test.png)
-### Gas phase minimization 
+### Gas-phase minimization 
 
 Upload the mol/pdb file of 1,2-Ethanediol or paste SMILES code from ChemDraw and download the **UNK.pdb** and **UNK.xml** files.
 
@@ -37,3 +37,11 @@ app.PDBFile.writeFile(simulation.topology, position, open('gasmin.pdb', 'w'))
 print 'Energy at Minimized structure is %3.3f kcal/mol'%(energy._value*KcalPerKJ)
 
 ```
+
+Save this code in `gasmin.py` and run it by typing following  command  
+
+> python gasmin.py
+
+### Gas-phase MD Simulation
+
+If you want to do a gas phase MD simulation for 1 million steps of 1fs each, i.e a total of 1ns. Add the following lines to the code above and 
