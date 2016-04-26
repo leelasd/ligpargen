@@ -15,3 +15,12 @@ Please install OpenMM using from source code or using conda build if anaconda py
 ### Gas phase minimization 
 
 Upload the mol/pdb file of 1,2-Ethanediol or paste SMILES code from ChemDraw and download the **UNK.pdb** and **UNK.xml** files.
+
+```python
+import mdtraj as md
+from simtk.openmm import app,KcalPerKJ
+import simtk.openmm as mm
+from simtk import unit as u
+from sys import stdout,exit
+from BOSSReader import *
+```
