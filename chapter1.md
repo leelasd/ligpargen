@@ -21,3 +21,4 @@ LigParGen provides the following files upon successfull submission of ligand.
 | AMBER | .prmtop | .inpcrd |
 | OpenMM | .xml | .pdb |
 | CHARMM | .prm | .rtf|
+|GROMACS | .itp | .gro|
