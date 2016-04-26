@@ -36,14 +36,14 @@ simulation.minimizeEnergy(maxIterations=100)
 energy=simulation.context.getState(getEnergy=True).getPotentialEnergy()
 position = simulation.context.getState(getPositions=True).getPositions()
 app.PDBFile.writeFile(simulation.topology, position, open('gasmin.pdb', 'w'))
-print 'Energy at Minimized structure is %3.3f kcal/mol'%(energy._value*KcalPerKJ)
+print 'Energy of Minimized structure is %3.3f kcal/mol'%(energy._value*KcalPerKJ)
 
 ```
 
 Save this code in `gasmin.py` and run it by typing following  command  
 ```
 $ python gasmin.py 
-$ Energy at Minimized structure is 2.205 kcal/mol
+$ output: Energy of Minimized structure is 2.205 kcal/mol
 ```
 ### Gas-phase MD Simulation
 
