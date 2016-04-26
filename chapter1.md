@@ -5,15 +5,19 @@ LigParGen is a webbased service that provides force field (FF) parameters for or
 
 LigParGen provides OPLS-AA force field parameters for modeling bonds, angles, torsions and Lennard-Jones interactions, and uses 1.14*CM1A charges for modeling electrostatic interactions
 
-One can obtain topology and parmeter files from SMILES code or by uploading mol/pdb files of the ligand. 
-
-**Supported input file formats: SMILES(2D), PDB and MOL (3D)**
-
-| Package | Parameters | Topology/Coordinates |
-| -- | -- | -- |
-| AMBER | .prmtop | .inpcrd |
-| OpenMM | .xml | .pdb |
 
 
 LigParGen can deal with molecules as big as Linezoloid shown in Figure 1.
 ![](linezo.png)
+
+One can obtain topology and parmeter files from SMILES code or by uploading mol/pdb files of the ligand. 
+
+**Supported input file formats: SMILES(2D), PDB and MOL (3D)**
+
+LigParGen provides the following files upon successfull submission of ligand.
+
+| Package | Parameters | Topology/Coordinates |
+| -- | :--: | :--: |
+| AMBER | .prmtop | .inpcrd |
+| OpenMM | .xml | .pdb |
+| CHARMM | .prm | .rtf|
