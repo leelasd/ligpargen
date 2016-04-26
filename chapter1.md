@@ -31,7 +31,7 @@ Click on the below links to learn more about installing these packages.
 
 - [GROMACS](http://www.gromacs.org/Documentation/Installation_Instructions_5.0) (Free)
 - [NAMD](http://www.ks.uiuc.edu/Research/namd/2.10/ug/node93.html) (Free)
-- [OpenMM](http://docs.openmm.org/6.2.0/userguide/application.html#installing-openmm) ()
+- [OpenMM](http://docs.openmm.org/6.2.0/userguide/application.html#installing-openmm) (Free)
 - AMBER (Commercial)
 
 Examples for using these files with different packages will be discussed here.
