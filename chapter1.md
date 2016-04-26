@@ -1,4 +1,4 @@
-# How to use LigParGen?
+# LigParGen
 
 ## What is LigParGen?
 LigParGen is a webbased service that provides force field (FF) parameters for organic molecules or ligands, offered by Jorgensen group.
