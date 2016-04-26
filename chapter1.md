@@ -22,3 +22,7 @@ LigParGen provides the following files upon successfull submission of ligand.
 | OpenMM | .xml | .pdb |
 | CHARMM | .prm | .rtf|
 |GROMACS | .itp | .gro|
+
+## How to use these parameter and topology files?
+
+Files obtained from LigParGen server are useful for performing MD simulations. These files are compatible with MD software such as NAMD, AMBER, GROMACS and OpenMM. 
