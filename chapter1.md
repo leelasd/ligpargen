@@ -16,12 +16,12 @@ One can obtain topology and parmeter files from SMILES code or by uploading mol/
 
 LigParGen provides the following files upon successfull submission of ligand.
 
-| Package | Parameters | Topology/Coordinates |
-| -- | :--: | :--: |
-| AMBER | .prmtop | .inpcrd |
-| OpenMM | .xml | .pdb |
-| CHARMM | .prm | .rtf|
-|GROMACS | .itp | .gro|
+ | Package | Parameters | Topology/Coordinates |
+ | -- | :--: | :--: |
+ | AMBER | .prmtop | .inpcrd |
+ | OpenMM | .xml | .pdb |
+ | CHARMM | .prm | .rtf|
+ |GROMACS | .itp | .gro|
 
 ## How to use these parameter and topology files?
 
