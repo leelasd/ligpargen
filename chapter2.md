@@ -13,3 +13,5 @@ Please install OpenMM using from source code or using conda build if anaconda py
 ## 1,2-Ethane Diol system 
 ![](test.png)
 ### Gas phase minimization 
+
+Upload the mol/pdb file of 1,2-Ethanediol or paste SMILES code from ChemDraw and download the **UNK.pdb** and **UNK.xml** files.
