@@ -34,7 +34,6 @@ simulation.minimizeEnergy(maxIterations=100)
 energy=simulation.context.getState(getEnergy=True).getPotentialEnergy()
 position = simulation.context.getState(getPositions=True).getPositions()
 app.PDBFile.writeFile(simulation.topology, position, open('gasmin.pdb', 'w'))
-print energy
-        print 'Energy at Minima is %3.3f kcal/mol'%(energy._value*KcalPerKJ)
+print 'Energy at Minimized structure is %3.3f kcal/mol'%(energy._value*KcalPerKJ)
 
 ```
