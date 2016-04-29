@@ -16,6 +16,10 @@ Please install OpenMM using from source code or using conda build if anaconda py
 
 Upload the mol/pdb file of 1,2-Ethanediol or paste SMILES code from ChemDraw and download the **UNK.pdb** and **UNK.xml** files.
 
+- For Gas phase MD simulations, `NoCutoffs` option is used.
+- No constraints are set on H-bonds
+
+
 ```python
 import mdtraj as md
 from simtk.openmm import app,KcalPerKJ
@@ -68,7 +72,7 @@ simulation.context.setPositions(modeller.positions)
 simulation.minimizeEnergy(maxIterations=100)
 ## Velocities are set for 298.15K. 1Million steps of 1fs are taken during MD simulation. 
 ## Statistics like Energy, Temperature and Progress are stored in data.txt
-## Trajectory is stored for every 1000 steps in gas_output.pdb 
+## Trajectory is stored for every 1000 steps in gas_output.pdb
 simulation.context.setVelocitiesToTemperature(temperature)
 simulation.reporters.append(app.PDBReporter('gas_output.pdb', 1000))
 simulation.reporters.append(app.StateDataReporter('data.txt', 1000, progress=True, temperature=True, potentialEnergy=True, density=True,totalSteps=10000,speed=True))
