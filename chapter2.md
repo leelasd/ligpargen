@@ -66,6 +66,9 @@ integrator = mm.LangevinIntegrator(temperature, 1/u.picosecond,  0.001*u.picosec
 simulation = app.Simulation(modeller.topology, system, integrator)
 simulation.context.setPositions(modeller.positions)
 simulation.minimizeEnergy(maxIterations=100)
+## Velocities are set for 298.15K. 1Million steps of 1fs are taken during MD simulation. 
+## Statistics like Energy, Temperature and Progress are stored in data.txt
+## Trajectory is stored for every 1000 steps in gas_output.pdb 
 simulation.context.setVelocitiesToTemperature(temperature)
 simulation.reporters.append(app.PDBReporter('gas_output.pdb', 1000))
 simulation.reporters.append(app.StateDataReporter('data.txt', 1000, progress=True, temperature=True, potentialEnergy=True, density=True,totalSteps=10000,speed=True))
