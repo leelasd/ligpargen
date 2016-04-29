@@ -67,7 +67,7 @@ simulation = app.Simulation(modeller.topology, system, integrator)
 simulation.context.setPositions(modeller.positions)
 simulation.minimizeEnergy(maxIterations=100)
 #energy=simulation.context.getState(getEnergy=True).getPotentialEnergy()
-position = #simulation.context.getState(getPositions=True).getPositions()
+#position =simulation.context.getState(getPositions=True).getPositions()
 #app.PDBFile.writeFile(simulation.topology, position, open('gasmin.pdb', 'w'))
 #print 'Energy of Minimized structure is %3.3f kcal/mol'%(energy._value*KcalPerKJ)
 ```
