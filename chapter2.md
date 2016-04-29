@@ -47,4 +47,27 @@ $ output: Energy of Minimized structure is 2.205 kcal/mol
 ```
 ### Gas-phase MD Simulation
 
-If you want to do a gas phase MD simulation for 1 million steps of 1fs each, i.e a total of 1ns. Add the following lines to the code above and 
+If you want to do a gas phase MD simulation for 1 million steps of 1fs each, i.e a total of 1ns. Add the following lines to the code above and submit the code.
+
+```python
+import mdtraj as md
+from simtk.openmm import app,KcalPerKJ
+import simtk.openmm as mm
+from simtk import unit as u
+from sys import stdout,exit
+
+temperature=298.15*u.kelvin
+pdb = app.PDBFile('ETD.pdb')
+modeller = app.Modeller(pdb.topology, pdb.positions)
+forcefield = app.ForceField('ETD.xml')
+system = forcefield.createSystem(modeller.topology, nonbondedMethod=app.NoCutoff,  constraints=None)
+
+integrator = mm.LangevinIntegrator(temperature, 1/u.picosecond,  0.001*u.picoseconds)
+simulation = app.Simulation(modeller.topology, system, integrator)
+simulation.context.setPositions(modeller.positions)
+simulation.minimizeEnergy(maxIterations=100)
+#energy=simulation.context.getState(getEnergy=True).getPotentialEnergy()
+position = #simulation.context.getState(getPositions=True).getPositions()
+#app.PDBFile.writeFile(simulation.topology, position, open('gasmin.pdb', 'w'))
+#print 'Energy of Minimized structure is %3.3f kcal/mol'%(energy._value*KcalPerKJ)
+```
