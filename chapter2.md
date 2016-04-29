@@ -66,8 +66,8 @@ integrator = mm.LangevinIntegrator(temperature, 1/u.picosecond,  0.001*u.picosec
 simulation = app.Simulation(modeller.topology, system, integrator)
 simulation.context.setPositions(modeller.positions)
 simulation.minimizeEnergy(maxIterations=100)
-#energy=simulation.context.getState(getEnergy=True).getPotentialEnergy()
-#position =simulation.context.getState(getPositions=True).getPositions()
-#app.PDBFile.writeFile(simulation.topology, position, open('gasmin.pdb', 'w'))
-#print 'Energy of Minimized structure is %3.3f kcal/mol'%(energy._value*KcalPerKJ)
+simulation.context.setVelocitiesToTemperature(temperature)
+simulation.reporters.append(app.PDBReporter('gas_output.pdb', 1000))
+simulation.reporters.append(app.StateDataReporter('data.txt', 1000, progress=True, temperature=True, potentialEnergy=True, density=True,totalSteps=10000,speed=True))
+simulation.step(1000000)
 ```
