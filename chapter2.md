@@ -11,7 +11,7 @@ Please install OpenMM using from source code or using conda build if anaconda py
 
 ---
 ## Combination Rules 
-Its important to note that most of the current force fields except OPLS-AA use Lorentz- Berthelot combination rules $$( \sigma_{ij} = \frac{\sigma_i + \sigma_j}{2} $$ and $$\epsilon_{ij} = \sqrt{\epsilon_i \epsilon_j} )$$ and is the only option present in OpenMM. If one wishes to use geometric combination rule used in OPLS-AA force field, include the function below in your MD codes and call the function to change the combination rule for LJ interactions. 
+Its important to note that most of the current force fields except OPLS-AA use Lorentz- Berthelot combination rule $$( \sigma_{ij} = \frac{\sigma_i + \sigma_j}{2} $$ and $$\epsilon_{ij} = \sqrt{\epsilon_i \epsilon_j} )$$ and is the only option present in OpenMM. If one wishes to use geometric combination rule used in OPLS-AA force field, include the function below in your MD codes and call the function to change the combination rule for LJ interactions. 
 
 ---
 # 1,2-Ethane Diol system 
