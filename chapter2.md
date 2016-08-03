@@ -10,7 +10,8 @@ OpenMM is a hardware independent molecular simulation library developed by Pande
 Please install OpenMM using from source code or using conda build if anaconda python is available in your computer. After successful installation continue to the do the tutorial below.
 
 ---
-## Combination Rules 
+## Improtant Notes
+### 1. Combination Rules 
 Its important to note that most of the current force fields except OPLS-AA use Lorentz- Berthelot combination rule $$( \sigma_{ij} = \frac{\sigma_i + \sigma_j}{2} $$ and $$\epsilon_{ij} = \sqrt{\epsilon_i \epsilon_j} )$$ and is the only combination rule implemented in OpenMM. If one wishes to use geometric combination rule used in OPLS-AA force field, include the function below in your MD codes and call the function to change the combination rule for LJ interactions. 
 
 ```python
@@ -40,6 +41,10 @@ def OPLS_LJ(system):
         nonbonded_force.setExceptionParameters(i, p1, p2, q, sig14, eps)
     return system
 ```
+
+## 2. Scaling factors for 1-4 interactions
+
+OPLS-AA uses scaling factor of 0.5 for both Lennard Jones and electrostatics, for 1-4 interactions. One should make sure that both solvent and solute have the same 1-4 scale factors.
 
 ---
 # 1,2-Ethane Diol system 
