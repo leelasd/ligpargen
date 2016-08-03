@@ -19,16 +19,18 @@ def OPLS_LJ(system):
     nonbonded_force = forces['NonbondedForce']
     lorentz = mm.CustomNonbondedForce( '4*epsilon*((sigma/r)^12-(sigma/r)^6); sigma=sqrt(sigma1*sigma2); epsilon=sqrt(epsilon1*epsilon2)')
     lorentz.setNonbondedMethod(nonbonded_force.getNonbondedMethod())
+    lorentz.addPerParticleParameter('sigma')
+    lorentz.addPerParticleParameter('epsilon')
+    lorentz.setCutoffDistance(nonbonded_force.getCutoffDistance())
+    system.addForce(lorentz)
+    LJset = {}
+    for index in range(nonbonded_force.getNumParticles()):
+        charge, sigma, epsilon =nonbonded_force.getParticleParameters(index)
+        LJset[index] = (sigma, epsilon)
+        lorentz.addParticle([sigma, epsilon])
+        nonbonded_force.setParticleParameters(index, charge, sigma, epsilon * 0)
 
- lorentz.addPerParticleParameter('sigma')
 
- lorentz.addPerParticleParameter('epsilon')
-
- lorentz.setCutoffDistance(nonbonded_force.getCutoffDistance())
-
- system.addForce(lorentz)
-
- LJset = {}
 
 ```
 
