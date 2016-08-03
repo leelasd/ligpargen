@@ -17,7 +17,18 @@ Its important to note that most of the current force fields except OPLS-AA use L
 def OPLS_LJ(system):
     forces ={system.getForce(index).__class__.__name__:system.getForce(index) for index in range(system.getNumForces())}
     nonbonded_force = forces['NonbondedForce']
+    lorentz = mm.CustomNonbondedForce( '4*epsilon*((sigma/r)^12-(sigma/r)^6); sigma=sqrt(sigma1*sigma2); epsilon=sqrt(epsilon1*epsilon2)')
+    lorentz.setNonbondedMethod(nonbonded_force.getNonbondedMethod())
 
+ lorentz.addPerParticleParameter('sigma')
+
+ lorentz.addPerParticleParameter('epsilon')
+
+ lorentz.setCutoffDistance(nonbonded_force.getCutoffDistance())
+
+ system.addForce(lorentz)
+
+ LJset = {}
 
 ```
 
