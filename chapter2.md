@@ -29,9 +29,16 @@ def OPLS_LJ(system):
         LJset[index] = (sigma, epsilon)
         lorentz.addParticle([sigma, epsilon])
         nonbonded_force.setParticleParameters(index, charge, sigma, epsilon * 0)
-
-
-
+    for i in range(nonbonded_force.getNumExceptions()):
+        (p1, p2, q, sig, eps) = nonbonded_force.getExceptionParameters(i)
+        # ALL THE 12,13 and 14 interactions are EXCLUDED FROM CUSTOM NONBONDED
+        # FORCE
+        lorentz.addExclusion(p1, p2)
+        if eps._value != 0.0:
+        sig14 = u.sqrt(LJset[p1][0] * LJset[p2][0])
+        eps14 = u.sqrt(LJset[p1][1] * LJset[p2][1])
+        nonbonded_force.setExceptionParameters(i, p1, p2, q, sig14, eps)
+    return system
 ```
 
 ---
