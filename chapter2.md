@@ -44,7 +44,11 @@ def OPLS_LJ(system):
 
 ## 2. Scaling factors for 1-4 interactions
 
-OPLS-AA uses scaling factor of 0.5 for both Lennard Jones and electrostatics, for 1-4 interactions. One should make sure that both solvent and solute have the same 1-4 scale factors.
+OPLS-AA uses scaling factor of 0.5 for both Lennard Jones and electrostatics, for 1-4 interactions. One should make sure that both solvent and solute have the same 1-4 scale factors. If you find them different, edit the line shown below in forcefield.xml file
+
+```
+
+```
 
 ---
 # 1,2-Ethane Diol system 
