@@ -8,6 +8,11 @@ Please look at the below references for more information
 
 Please install OpenMM using from source code or using conda build if anaconda python is available in your computer. After successful installation continue to the do the tutorial below.
 
+{% gist id="https://gist.github.com/SamyPesse/6ceb8cb8d531ffab75f0" %}{% endgist %}
+
+
+
+
 ---
 ## Improtant Notes
 
