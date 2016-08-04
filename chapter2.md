@@ -91,7 +91,7 @@ Upload the mol\/pdb file of 1,2-Ethanediol or paste SMILES code from ChemDraw an
 
 Save this code in `gasmin.py` and run it by typing following  command
 
-```
+```python
 $ python gasmin.py 
 $ output: Energy of Minimized structure is 2.205 kcal\/mol
 ```
