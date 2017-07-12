@@ -1,4 +1,4 @@
 # LigParGen:  FAQ's
 
-This Repository is made to track issues ob LigParGen Server
+This Repository is made to track issues of LigParGen Server
 
