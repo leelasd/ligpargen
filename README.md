@@ -1,3 +1,4 @@
-#LigParGen: Tutorials and FAQ's
+# LigParGen:  FAQ's
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+This Repository is made to track issues ob LigParGen Server
+
