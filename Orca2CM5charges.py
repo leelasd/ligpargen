@@ -154,7 +154,7 @@ if __name__ == "__main__":
        Leela S. Dodda, Jonah Z. Vilseck, Kara J. Cutrona, and William L. Jorgensen J. Chem. Theory Comput., 2015, 11 (9), pp 4273–428
 """)
     parser.add_argument(
-        "-o", "--orcalogfile", help="Residue name from PDB FILE", type=str)
+        "-o", "--orcalogfile", help="LOG FILE from ORCA QM calculation", type=str)
     args = parser.parse_args()
     a0,rd,pt = LoadModel() 
     data = GetLogFile(args.orcalogfile,pt,rd)
