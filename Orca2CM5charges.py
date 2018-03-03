@@ -159,4 +159,5 @@ if __name__ == "__main__":
     a0,rd,pt = LoadModel() 
     data = GetLogFile(args.orcalogfile,pt,rd)
     qcm5 = HirshfeldToCM5(data,a0)
+    qcm5.to_csv('CM5_charges.csv',index=False,float_format='%6.4f')
     print(qcm5)
